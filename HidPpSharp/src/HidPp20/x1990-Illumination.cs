@@ -1,4 +1,3 @@
-using BxEx;
 using HidPpSharp.HidPp20.Attributes;
 
 namespace HidPpSharp.HidPp20;
@@ -379,7 +378,8 @@ public class Illumination : AbstractFeature {
         public int[] Values { get; }
 
         public override byte[] Pack() {
-            var valuesData = (from v in Values select BitConverter.GetBytes((ushort)v)).SelectMany(bytes => bytes).ToArray();
+            var valuesData = (from v in Values select BitConverter.GetBytes((ushort)v)).SelectMany(bytes => bytes)
+                .ToArray();
 
             return ByteUtils.Pack(
                 (byte)((Count & 0x06) << 5) | (byte)(IsReset ? 0x02 : 0x00),

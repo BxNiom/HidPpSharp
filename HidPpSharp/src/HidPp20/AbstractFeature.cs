@@ -1,12 +1,11 @@
-using BxEx.Math;
 using log4net;
 
 namespace HidPpSharp.HidPp20;
 
 public abstract class AbstractFeature {
-    public const              byte       ShortRequestId = 0x10;
-    public const              byte       LargeRequestId = 0x11;
-    protected static readonly FastRandom Random         = new();
+    public const              byte   ShortRequestId = 0x10;
+    public const              byte   LargeRequestId = 0x11;
+    protected static readonly Random Random         = new();
 
     protected AbstractFeature(HidPp20Features features, FeatureId featureId, int? featureIndex = null) {
         Log = LogManager.GetLogger(

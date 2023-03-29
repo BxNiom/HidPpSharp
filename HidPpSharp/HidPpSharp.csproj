@@ -19,18 +19,12 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\net6.0\HidPpSharp.xml</DocumentationFile>
+        <DocumentationFile>bin\Release\net6.0\HidPpSharp.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="HidSharp" Version="2.1.0" />
-        <PackageReference Include="log4net" Version="2.0.15" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Reference Include="BxEx.Math">
-            <HintPath>..\..\..\..\.nuget\packages\bxex.math\0.0.1\lib\net6.0\BxEx.Math.dll</HintPath>
-        </Reference>
+        <PackageReference Include="HidSharp" Version="2.1.0"/>
+        <PackageReference Include="log4net" Version="2.0.15"/>
     </ItemGroup>
 
 </Project>

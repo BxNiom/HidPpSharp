@@ -1,5 +1,4 @@
 using System.Text;
-using BxEx;
 using HidPpSharp.HidPp20.Attributes;
 
 namespace HidPpSharp.HidPp20;

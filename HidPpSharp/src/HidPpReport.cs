@@ -1,4 +1,3 @@
-using BxEx;
 using HidPpSharp.DJ;
 using HidPpSharp.HidPp10;
 using HidPpSharp.HidPp20;

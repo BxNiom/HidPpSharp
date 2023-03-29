@@ -3,19 +3,18 @@ using System.Text;
 namespace HidPpSharp;
 
 internal static class ByteUtils {
-
     public static byte[] Pack(params object[] primitives) {
         using var ms = new MemoryStream();
-        
+
         foreach (var o in primitives) {
             var oType = o.GetType();
             var buf   = Array.Empty<byte>();
-            
+
             if (oType == typeof(byte)) {
                 ms.WriteByte((byte)o);
                 continue;
-            } 
-            
+            }
+
             if (oType == typeof(byte[])) {
                 buf = (byte[])o;
             } else if (oType == typeof(ushort) || oType == typeof(short)) {
@@ -33,14 +32,14 @@ internal static class ByteUtils {
             } else {
                 throw new ArgumentException($"{oType} is not primitive");
             }
-            
+
             ms.Write(buf, 0, buf.Length);
             ms.Flush();
         }
 
         return ms.ToArray();
     }
-    
+
     public static bool PartEqual(this byte[] left, byte[] right) {
         for (var ii = 0; ii < Math.Min(left.Length, right.Length); ii++) {
             if (left[ii] != right[ii]) {
@@ -77,14 +76,14 @@ internal static class ByteUtils {
     }
 
     public static bool IsBitSet(this byte b, int bit) {
-        return (b & 1 << bit) > 0;
+        return (b & (1 << bit)) > 0;
     }
 
     public static ushort ToUInt16(this byte[] b, int offset) {
-        return (ushort)(b[offset] << 8 | b[offset + 1]);
+        return (ushort)((b[offset] << 8) | b[offset + 1]);
     }
 
     public static short ToInt16(this byte[] b, int offset) {
-        return (short)(b[offset] << 8 | b[offset + 1]);
+        return (short)((b[offset] << 8) | b[offset + 1]);
     }
 }
