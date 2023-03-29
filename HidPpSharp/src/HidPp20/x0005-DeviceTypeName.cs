@@ -4,7 +4,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.DeviceName)]
-public class DeviceTypeName : Feature {
+public class DeviceTypeName : AbstractFeature {
     public enum DeviceType {
         Keyboard               = 0x00,
         RemoteControl          = 0x01,

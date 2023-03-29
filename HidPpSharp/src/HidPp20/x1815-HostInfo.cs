@@ -13,7 +13,7 @@ namespace HidPpSharp.HidPp20;
 /// connection across channels, and deleting host connections.
 /// </summary>
 [Feature(FeatureId.HostInfo)]
-public class HostInfo : Feature {
+public class HostInfo : AbstractFeature {
     public enum BusType {
         Undefined             = 0x00,
         EQuad                 = 0x01,

@@ -3,12 +3,12 @@ using log4net;
 
 namespace HidPpSharp.HidPp20;
 
-public abstract class Feature {
+public abstract class AbstractFeature {
     public const              byte       ShortRequestId = 0x10;
     public const              byte       LargeRequestId = 0x11;
     protected static readonly FastRandom Random         = new();
 
-    protected Feature(HidPp20Features features, FeatureId featureId, int? featureIndex = null) {
+    protected AbstractFeature(HidPp20Features features, FeatureId featureId, int? featureIndex = null) {
         Log = LogManager.GetLogger(
             $"{features}[Feature.{featureId}]");
         Features     = features;
@@ -32,11 +32,11 @@ public abstract class Feature {
     public byte            FeatureIndex { get; }
     public byte            Version      { get; }
 
-    protected FeatureReport CallFunction(int func, params byte[] parameters) {
+    public FeatureReport CallFunction(int func, params byte[] parameters) {
         return CallFunction(func, true, parameters)!;
     }
 
-    protected FeatureReport? CallFunction(int func, bool waitForResponse, params byte[] parameters) {
+    public FeatureReport? CallFunction(int func, bool waitForResponse, params byte[] parameters) {
         Log.DebugFormat("CallFunction({0}, [{1}])", func, BitConverter.ToString(parameters));
         var requestId = parameters.Length + 4 > 7 ? LargeRequestId : ShortRequestId;
         var sw        = (byte)(Random.NextBytes(1)[0] & 0x0F);

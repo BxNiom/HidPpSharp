@@ -4,7 +4,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.DeviceFriendlyName)]
-public class DeviceFriendlyName : Feature {
+public class DeviceFriendlyName : AbstractFeature {
     public const byte FuncGetFriendlyNameLen     = 0x00;
     public const byte FuncGetFriendlyName        = 0x01;
     public const byte FuncGetDefaultFriendlyName = 0x02;

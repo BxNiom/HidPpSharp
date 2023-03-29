@@ -6,7 +6,7 @@ namespace HidPpSharp.HidPp20;
 /// This feature exposes and configures the smart shift enhanced functionality on a 3G/EPM wheel.
 /// </summary>
 [Feature(FeatureId.SmartShift)]
-public class SmartShift : Feature {
+public class SmartShift : AbstractFeature {
     public enum WheelMode : byte {
         Freespin = 0x01,
         Ratchet  = 0x02

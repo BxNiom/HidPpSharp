@@ -8,7 +8,7 @@ namespace HidPpSharp.HidPp20;
 /// torque)
 /// </summary>
 [Feature(FeatureId.SmartShiftEnhanced)]
-public class SmartShiftEnhanced : Feature {
+public class SmartShiftEnhanced : AbstractFeature {
     public enum WheelMode : byte {
         DoNotChange = 0x00,
         Freespin    = 0x01,

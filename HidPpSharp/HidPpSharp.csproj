@@ -4,6 +4,22 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>0.1.0</Version>
+        <Title>HidPpSharp</Title>
+        <Authors>BxNiom &lt;bxniom@protonmail.com&gt;</Authors>
+        <Description>HID++ wrapper for .Net Core</Description>
+        <Copyright>BxNiom</Copyright>
+        <PackageProjectUrl>https://github.com/BxNiom/HidPpSharp</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/BxNiom/HidPpSharp/blob/401eebce9a789d02a539495d5ed77fe8c93a47e9/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/BxNiom/HidPpSharp</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>logitech;hid;usb;hidpp;hidraw;usb-hid;wrapper</PackageTags>
+        <AssemblyVersion>0.1</AssemblyVersion>
+        <FileVersion>0.1</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\net6.0\HidPpSharp.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

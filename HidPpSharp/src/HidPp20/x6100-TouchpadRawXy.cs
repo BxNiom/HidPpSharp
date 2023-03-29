@@ -5,7 +5,7 @@ namespace HidPpSharp.HidPp20;
 // TODO Events
 
 [Feature(FeatureId.TouchpadRawXy)]
-public class TouchpadRawXy : Feature {
+public class TouchpadRawXy : AbstractFeature {
     /// <summary>
     /// The corners are defined by looking at the device from above, with the lower edge towards the user and the upper
     /// facing the PC screen

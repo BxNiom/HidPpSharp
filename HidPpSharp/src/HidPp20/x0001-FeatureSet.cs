@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.FeatureSet)]
-public class FeatureSet : Feature {
+public class FeatureSet : AbstractFeature {
     public const int FuncGetCount     = 0x00;
     public const int FuncGetFeatureId = 0x01;
 

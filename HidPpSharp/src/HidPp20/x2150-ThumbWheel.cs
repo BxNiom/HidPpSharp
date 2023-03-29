@@ -12,7 +12,7 @@ namespace HidPpSharp.HidPp20;
 /// proxy (proximity) / touch detection, single tap gesture, etc
 /// </summary>
 [Feature(FeatureId.ThumbWheel)]
-public class ThumbWheel : Feature {
+public class ThumbWheel : AbstractFeature {
     [Flags]
     public enum Capabilities {
         /// <summary>

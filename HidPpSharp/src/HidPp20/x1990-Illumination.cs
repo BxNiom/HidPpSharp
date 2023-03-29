@@ -10,7 +10,7 @@ namespace HidPpSharp.HidPp20;
 /// The unit for color temperature values is Kelvin.
 /// </summary>
 [Feature(FeatureId.Illumination)]
-public class Illumination : Feature {
+public class Illumination : AbstractFeature {
     [Flags]
     public enum Capability : byte {
         /// <summary>

@@ -18,7 +18,7 @@ public class HidPp20Features : IEnumerable<FeatureId> {
 
         var log = LogManager.GetLogger("FeatureLoader");
         foreach (var t in typeof(HidPp20Features).Assembly.GetTypes()) {
-            if (typeof(Feature).IsAssignableFrom(t)) {
+            if (typeof(AbstractFeature).IsAssignableFrom(t)) {
                 log.DebugFormat("found feature class: {0}", t);
                 var attrib = t.GetCustomAttribute<FeatureAttribute>();
                 if (attrib == null) {
@@ -75,16 +75,16 @@ public class HidPp20Features : IEnumerable<FeatureId> {
         return (from f in _features where f.Code == fid select f).Any();
     }
 
-    public Feature GetFeature(FeatureId featureId) {
+    public AbstractFeature GetFeature(FeatureId featureId) {
         if (!FeatureClasses.ContainsKey(featureId)) {
             throw new NotSupportedException();
         }
 
         var ctor = FeatureClasses[featureId];
-        return (Feature)ctor.Invoke(new object?[] { this });
+        return (AbstractFeature)ctor.Invoke(new object?[] { this });
     }
 
-    public T GetFeature<T>() where T : Feature {
+    public T GetFeature<T>() where T : AbstractFeature {
         var ctor = typeof(T).GetConstructor(BindingFlags.Instance | BindingFlags.Public, null,
             new[] { typeof(HidPp20Features) }, null);
 

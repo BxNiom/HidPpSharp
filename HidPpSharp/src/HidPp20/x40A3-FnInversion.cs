@@ -6,7 +6,7 @@ namespace HidPpSharp.HidPp20;
 // TODO Events
 
 [Feature(FeatureId.FnInversion)]
-public class FnInversion : Feature {
+public class FnInversion : AbstractFeature {
     public const int FuncGetGlobalFnInversion = 0x00;
     public const int FuncSetGlobalFnInversion = 0x01;
 

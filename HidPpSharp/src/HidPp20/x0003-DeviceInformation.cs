@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.DeviceInformation)]
-public class DeviceInformation : Feature {
+public class DeviceInformation : AbstractFeature {
     public enum FwType {
         MainApplication    = 0x00,
         Bootloader         = 0x01,

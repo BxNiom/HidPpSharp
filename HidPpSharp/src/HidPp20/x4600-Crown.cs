@@ -5,7 +5,7 @@ namespace HidPpSharp.HidPp20;
 // TODO Events
 
 [Feature(FeatureId.Crown)]
-public class Crown : Feature {
+public class Crown : AbstractFeature {
     [Flags]
     public enum Capabilities : ushort {
         Proximity         = 0x0001,

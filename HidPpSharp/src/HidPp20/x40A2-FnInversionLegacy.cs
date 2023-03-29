@@ -7,7 +7,7 @@ namespace HidPpSharp.HidPp20;
 /// Legacy Support
 /// </summary>
 [Feature(FeatureId.FnInversionLegacy)]
-public class FnInversionLegacy : Feature {
+public class FnInversionLegacy : AbstractFeature {
     public const int FuncGetGlobalFnInversion = 0x00;
     public const int FuncSetGlobalFnInversion = 0x01;
 

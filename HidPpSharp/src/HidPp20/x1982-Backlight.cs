@@ -11,7 +11,7 @@ namespace HidPpSharp.HidPp20;
 /// This feature also can be used by keyboard that has similar backlight sytem.
 /// </summary>
 [Feature(FeatureId.Backlight, FeatureId.BacklightV1, FeatureId.BacklightV3)]
-public class Backlight : Feature {
+public class Backlight : AbstractFeature {
     public enum BacklightEffect : byte {
         Static         = 0x00,
         None           = 0x01,

@@ -4,7 +4,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.ChangeHost)]
-public class ChangeHost : Feature {
+public class ChangeHost : AbstractFeature {
     public const byte FuncGetHostInfo    = 0x00;
     public const byte FuncSetCurrentHost = 0x01;
     public const byte FuncGetCookies     = 0x02;

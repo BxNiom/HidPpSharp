@@ -6,6 +6,7 @@ public interface IHidPpDevice : IDisposable {
     public int                      ProductId     { get; }
     public int                      VendorId      { get; }
     public HidPpDeviceInputReceiver InputReceiver { get; }
+    public HidDevice                HidDevice     { get; }
     public HidStream?               Stream        { get; }
     public byte                     DeviceIndex   { get; }
 

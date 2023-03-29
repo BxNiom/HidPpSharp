@@ -24,7 +24,7 @@ namespace HidPpSharp.HidPp20;
 /// number of periods.
 /// </summary>
 [Feature(FeatureId.HiResWheel)]
-public class HiResWheel : Feature {
+public class HiResWheel : AbstractFeature {
     [Flags]
     public enum WheelMode : byte {
         /// <summary>

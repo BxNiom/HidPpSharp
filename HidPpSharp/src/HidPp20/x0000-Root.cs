@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.Root)]
-public class Root : Feature {
+public class Root : AbstractFeature {
     public const int FuncGetFeature         = 0x00;
     public const int FuncGetProtocolVersion = 0x01;
 

@@ -4,7 +4,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.BatteryStatus)]
-public class BatteryStatus : Feature {
+public class BatteryStatus : AbstractFeature {
     public enum BatteryLevel {
         Invalid          = 0x00,
         Low              = 0x18,

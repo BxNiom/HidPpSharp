@@ -1,0 +1,72 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DeviceSniffer.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DeviceSniffer.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DeviceSniffer">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="28"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" 
+                   Margin="8, 8"
+                   HorizontalAlignment="Stretch">
+            <TextBlock Text="Device:" 
+                       Margin="0, 0, 10, 0"
+                       VerticalAlignment="Center"/>
+            <ComboBox x:Name="deviceComboBox"  
+                      SelectedIndex="-1"
+                      HorizontalAlignment="Stretch"
+                      
+                      Items="{Binding HidDeviceInfos}"
+                      SelectionChanged="DeviceComboBox_OnSelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </DockPanel>
+        <TextBox Grid.Row="1" x:Name="textBoxData" IsReadOnly="true" FontFamily="FiraCode Nerd Font Mono" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="4">
+            <TextBlock Text="Feature:" VerticalAlignment="Center" Margin="4"/>
+            <ComboBox x:Name="featureComboBox"
+                      Items="{Binding WorkingDevice.DeviceFeatures}"
+                      Width="250"
+                      SelectedIndex="-1">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding FullName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBlock Text="Function:" VerticalAlignment="Center" Margin="4"/>
+            <TextBox x:Name="funcIdTextBox" Width="50" AcceptsReturn="False" AcceptsTab="False"/>
+            <TextBlock Text="Arguments:" VerticalAlignment="Center" Margin="4"/>
+            <TextBox x:Name="argsTextBox" Width="250" AcceptsReturn="False" AcceptsTab="False"/>
+            <Button x:Name="sendButton" Margin="8, 0" Content="Send" Click="SendButton_OnClick">
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <CheckBox x:Name="hid10CheckBox" IsEnabled="false" IsChecked="{Binding WorkingDevice.IsHidPp10Supported}"/>
+            <TextBlock Text="HID++ 1.0" VerticalAlignment="Center"/>
+            <CheckBox x:Name="hid20CheckBox" IsEnabled="false" IsChecked="{Binding WorkingDevice.IsHidPp20Supported}" Margin="16,0,0,0" />
+            <TextBlock Text="HID++ 2.0" VerticalAlignment="Center"/>
+            <TextBlock Text="Protocol Version:" VerticalAlignment="Center" Margin="16, 0, 4, 0"/>
+            <TextBlock x:Name="protocolVersionTextBlock" Text="{Binding WorkingDevice.ProtocolVersion}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+    
+</Window>

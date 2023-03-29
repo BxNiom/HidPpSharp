@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.AudioEqualizer)]
-public class AudioEqualizer : Feature {
+public class AudioEqualizer : AbstractFeature {
     public enum GainsLocation : byte {
         /// <summary>
         /// Custom EQ

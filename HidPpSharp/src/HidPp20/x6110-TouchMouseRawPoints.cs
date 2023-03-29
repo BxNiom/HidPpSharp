@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.TouchMouseRawPoints)]
-public class TouchMouseRawPoints : Feature {
+public class TouchMouseRawPoints : AbstractFeature {
     /// <summary>
     /// The corners are defined by looking at the device from above, with the lower edge towards the user and the upper
     /// facing the PC screen

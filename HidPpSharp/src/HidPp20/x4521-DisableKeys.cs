@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.KeyboardDisableKeys)]
-public class DisableKeys : Feature {
+public class DisableKeys : AbstractFeature {
     [Flags]
     public enum Keys : byte {
         CapsLock   = 0x01,

@@ -7,7 +7,7 @@ namespace HidPpSharp.HidPp20;
 /// Feature to change the device report rate
 /// </summary>
 [Feature(FeatureId.ReportRate)]
-public class ReportRate : Feature {
+public class ReportRate : AbstractFeature {
     public const int FuncGetReportRateList = 0x00;
     public const int FuncGetReportRate     = 0x01;
     public const int FuncSetReportRate     = 0x02;

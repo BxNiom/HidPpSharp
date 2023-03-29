@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HidPpSharp", "HidPpSharp\HidPpSharp.csproj", "{690FD666-63BD-4B64-B4D0-1F637560C448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceSniffer", "DeviceSniffer\DeviceSniffer.csproj", "{57221BEE-EA52-4AB2-8CCC-1F30DA04FF50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{690FD666-63BD-4B64-B4D0-1F637560C448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{690FD666-63BD-4B64-B4D0-1F637560C448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{690FD666-63BD-4B64-B4D0-1F637560C448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57221BEE-EA52-4AB2-8CCC-1F30DA04FF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57221BEE-EA52-4AB2-8CCC-1F30DA04FF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57221BEE-EA52-4AB2-8CCC-1F30DA04FF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57221BEE-EA52-4AB2-8CCC-1F30DA04FF50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

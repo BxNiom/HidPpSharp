@@ -7,7 +7,7 @@ namespace HidPpSharp.HidPp20;
 /// 
 /// </summary>
 [Feature(FeatureId.MousePointer)]
-public class MousePointer : Feature {
+public class MousePointer : AbstractFeature {
     public enum Acceleration : byte {
         None   = 0x00,
         Low    = 0x01,

@@ -7,7 +7,7 @@ namespace HidPpSharp.HidPp20;
 /// 0x2100) when using this feature.
 /// </summary>
 [Feature(FeatureId.HiResScrolling)]
-public class HiResScrolling : Feature {
+public class HiResScrolling : AbstractFeature {
     public const int FuncGetHighResScrollingMode = 0x00;
     public const int FuncSetHighResScrollingMode = 0x01;
 

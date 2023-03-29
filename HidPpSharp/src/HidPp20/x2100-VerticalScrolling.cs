@@ -3,7 +3,7 @@ using HidPpSharp.HidPp20.Attributes;
 namespace HidPpSharp.HidPp20;
 
 [Feature(FeatureId.VerticalScrolling)]
-public class VerticalScrolling : Feature {
+public class VerticalScrolling : AbstractFeature {
     public enum RollerType : byte {
         /// <summary>
         /// Standard roller, 1D & 2D type

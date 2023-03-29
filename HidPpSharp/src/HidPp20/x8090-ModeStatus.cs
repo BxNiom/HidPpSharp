@@ -7,7 +7,7 @@ namespace HidPpSharp.HidPp20;
 /// This interface is used to notify and be queried by software.
 /// </summary>
 [Feature(FeatureId.ModeStatus)]
-public class ModeStatus : Feature {
+public class ModeStatus : AbstractFeature {
     [Flags]
     public enum ConfigFlags : ushort {
         HardwareSwitch = 0x0001,

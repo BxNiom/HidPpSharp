@@ -1,5 +1,13 @@
 # HidPpSharp Changelog
 
+## HPS-008
+
+__Release HidPpSharp 0.1__
+* Added DJ report support
+* Removed dependencies for BxEx libraries
+* Created DeviceSniffer to test undocumented HID++ features and functions
+  * Using Avalonia UI Framework
+
 ## HPS-007
 
 * Moved to GitHub (https://github.com/BxNiom/HidPpSharp)

@@ -6,7 +6,7 @@ namespace HidPpSharp.HidPp20;
 // TODO Events
 
 [Feature(FeatureId.SpecialKeysMseButtons, FeatureId.SpecialKeysMseButtonsV6)]
-public class SpecialKeysMseButtons : Feature {
+public class SpecialKeysMseButtons : AbstractFeature {
     [Flags]
     public enum Capabilities : byte {
         ResetAllCidReportSettings = 0x01

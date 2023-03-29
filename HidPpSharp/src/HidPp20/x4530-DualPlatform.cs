@@ -10,7 +10,7 @@ namespace HidPpSharp.HidPp20;
 /// There is no default setting since the platform is selected by the user as part of the pairing process.
 /// </summary>
 [Feature(FeatureId.DualPlatform)]
-public class DualPlatform : Feature {
+public class DualPlatform : AbstractFeature {
     public enum Platform {
         IOs     = 0x00,
         MacOsX  = 0x00,

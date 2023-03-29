@@ -6,7 +6,7 @@ namespace HidPpSharp.HidPp20;
 /// This feature provides the ability to disable/enable any keys by HID usage.
 /// </summary>
 [Feature(FeatureId.KeyboardDisableByUsage)]
-public class DisableKeysByUsage : Feature {
+public class DisableKeysByUsage : AbstractFeature {
     public const int FuncGetCapabilities = 0x00;
     public const int FuncDisableKeys     = 0x01;
     public const int FuncEnableKeys      = 0x02;

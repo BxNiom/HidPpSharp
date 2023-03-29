@@ -9,7 +9,7 @@ namespace HidPpSharp.HidPp20;
 /// (e.g. show battery status).
 /// </summary>
 [Feature(FeatureId.PersistentRemappableAction)]
-public class PersistentRemappableAction : Feature {
+public class PersistentRemappableAction : AbstractFeature {
     public enum ActionId {
         /// <summary>
         /// send keyboard/keypad report

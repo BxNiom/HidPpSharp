@@ -8,7 +8,7 @@ namespace HidPpSharp.HidPp20;
 /// transmitted directly to the earpiece.
 /// </summary>
 [Feature(FeatureId.AudioSideToneAdjustment)]
-public class AudioSideToneAdjustment : Feature {
+public class AudioSideToneAdjustment : AbstractFeature {
     public enum MuteJack {
         Jack1 = 0x00,
         Jack2 = 0x01,

@@ -17,7 +17,7 @@ namespace HidPpSharp.HidPp20;
 /// overwritten by OS detection).
 /// </summary>
 [Feature(FeatureId.MultiPlatform)]
-public class MultiPlatform : Feature {
+public class MultiPlatform : AbstractFeature {
     [Flags]
     public enum Platform : ushort {
         Tizen           = 0x0001,
